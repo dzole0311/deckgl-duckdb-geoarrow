@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "dzole0311",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
