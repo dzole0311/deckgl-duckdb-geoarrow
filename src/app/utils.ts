@@ -2,8 +2,11 @@ import { Table, vectorFromArray, FixedSizeList, Float64, Field } from "apache-ar
 
 /**
  * Constructs a GeoArrow-compatible Table from individual Arrow vectors.
- * Currently, the geoarrow-js library does not support building GeoArrow tables directly,
- * so we manually create a FixedSizeList column for the geometry.
+ *
+ * DuckDB-WASM typically exports geometry as WKB (Well-Known Binary). Since
+ * WKB-to-GeoArrow parsing in geoarrow-js is not yet supported,
+ * we're adding this utility function as a bridge between Arrow Tables and GeoArrow.
+ *
  * Ideally, this function can be replaced with a proper GeoArrow Table constructor in the future.
  * See: https://github.com/geoarrow/geoarrow-js/issues/42
  *
