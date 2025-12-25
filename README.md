@@ -9,7 +9,19 @@ The architecture uses Mosaic’s global Coordinator to manage state between link
 
 ## Getting Started
 
-First run `npm install`, then run the development server:
+Create `.env` file and add a Mapbox token:
+
+```bash
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your-mapbox-token
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
